@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct Time {
+    int hours, minutes, seconds;
+};
+
+int main() {
+    struct Time t;
+    printf("Enter hours: ");
+    scanf("%d", &t.hours);
+    printf("Enter minutes: ");
+    scanf("%d", &t.minutes);
+    printf("Enter seconds: ");
+    scanf("%d", &t.seconds);
+    printf("Total seconds: %d\n", t.hours*3600 + t.minutes*60 + t.seconds);
+    return 0;
+}
