@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+struct Product { char name[100]; double price; int quantity; };
+
+int main() {
+    struct Product p[3];
+    double total = 0;
+    for (int i = 0; i < 3; i++) {
+        printf("Product %d - name: ",     i+1); scanf("%s", p[i].name);
+        printf("Product %d - price: ",    i+1); scanf("%lf", &p[i].price);
+        printf("Product %d - quantity: ", i+1); scanf("%d", &p[i].quantity);
+        total += p[i].price * p[i].quantity;
+    }
+    printf("\nTotal warehouse value: %.2f UAH\n", total);
+    return 0;
+}
