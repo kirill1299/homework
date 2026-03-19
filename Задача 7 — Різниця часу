@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+struct Time { int hours, minutes, seconds; };
+
+int toSeconds(struct Time t) {
+    return t.hours*3600 + t.minutes*60 + t.seconds;
+}
+
+int main() {
+    struct Time t1, t2;
+    printf("Time 1 - hours: ");   scanf("%d", &t1.hours);
+    printf("Time 1 - minutes: "); scanf("%d", &t1.minutes);
+    printf("Time 1 - seconds: "); scanf("%d", &t1.seconds);
+    printf("Time 2 - hours: ");   scanf("%d", &t2.hours);
+    printf("Time 2 - minutes: "); scanf("%d", &t2.minutes);
+    printf("Time 2 - seconds: "); scanf("%d", &t2.seconds);
+    printf("Difference: %d seconds\n", toSeconds(t2) - toSeconds(t1));
+    return 0;
+}
