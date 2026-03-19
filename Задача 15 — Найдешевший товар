@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+struct Product { char name[100]; double price; };
+
+int main() {
+    struct Product p[3];
+    for (int i = 0; i < 3; i++) {
+        printf("Product %d - name: ",  i+1); scanf("%s", p[i].name);
+        printf("Product %d - price: ", i+1); scanf("%lf", &p[i].price);
+    }
+    int cheapest = 0;
+    for (int i = 1; i < 3; i++)
+        if (p[i].price < p[cheapest].price) cheapest = i;
+    printf("\nCheapest: %s (%.2f UAH)\n", p[cheapest].name, p[cheapest].price);
+    return 0;
+}
