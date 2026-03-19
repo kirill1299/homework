@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+struct Rectangle {
+    double width, height;
+};
+
+int main() {
+    struct Rectangle r;
+    printf("Enter width: ");
+    scanf("%lf", &r.width);
+    printf("Enter height: ");
+    scanf("%lf", &r.height);
+    printf("Area: %.2f\n", r.width * r.height);
+    printf("Perimeter: %.2f\n", 2 * (r.width + r.height));
+    return 0;
+}
