@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+struct Complex { double real, imag; };
+
+int main() {
+    struct Complex c1, c2;
+    printf("Complex 1 - real: "); scanf("%lf", &c1.real);
+    printf("Complex 1 - imag: "); scanf("%lf", &c1.imag);
+    printf("Complex 2 - real: "); scanf("%lf", &c2.real);
+    printf("Complex 2 - imag: "); scanf("%lf", &c2.imag);
+    double r = c1.real + c2.real;
+    double i = c1.imag + c2.imag;
+    if (i >= 0)
+        printf("Sum: %.0f + %.0fi\n", r, i);
+    else
+        printf("Sum: %.0f - %.0fi\n", r, -i);
+    return 0;
+}
