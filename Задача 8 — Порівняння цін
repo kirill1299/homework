@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+struct Product { char name[100]; double price; };
+
+int main() {
+    struct Product p1, p2;
+    printf("Product 1 - name: ");  scanf("%s", p1.name);
+    printf("Product 1 - price: "); scanf("%lf", &p1.price);
+    printf("Product 2 - name: ");  scanf("%s", p2.name);
+    printf("Product 2 - price: "); scanf("%lf", &p2.price);
+    if (p1.price > p2.price)
+        printf("%s is more expensive\n", p1.name);
+    else if (p2.price > p1.price)
+        printf("%s is more expensive\n", p2.name);
+    else
+        printf("Prices are equal\n");
+    return 0;
+}
