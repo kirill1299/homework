@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Book {
+    char title[100];
+    char author[100];
+    int year;
+};
+
+int main() {
+    struct Book b;
+    printf("Enter title: ");
+    fgets(b.title, 100, stdin);
+    b.title[strcspn(b.title, "\n")] = 0;
+    printf("Enter author: ");
+    fgets(b.author, 100, stdin);
+    b.author[strcspn(b.author, "\n")] = 0;
+    printf("Enter year: ");
+    scanf("%d", &b.year);
+    printf("\"%s\" by %s (%d)\n", b.title, b.author, b.year);
+    return 0;
+}
